@@ -1,0 +1,18 @@
+nav {
+    background-color: goldenrod;
+    padding: 5px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+.container ul {
+    display: flex;
+}
+.container li {
+    list-style-type: none;
+    margin: 0 20px;
+}

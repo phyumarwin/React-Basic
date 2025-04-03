@@ -1,0 +1,20 @@
+.blogLists {
+    background-color: rgb(13, 172, 119);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogLists .single_blog {
+    flex: 1;
+    background-color: rgb(107, 29, 181);
+    margin: 20px;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 30px;
+}
