@@ -6,7 +6,10 @@ export default function BlogLists({blogs}) {
     <div className='blogLists container'>
       {
         blogs.map(blog => (
-          <div className='single_blog' key={blog.id}>{blog.title}</div>
+          <div className='single_blog' key={blog.id}>
+            <h2>{blog.title}</h2>
+            <h3>{blog.status}</h3>
+          </div>
         ))
       }    
     </div>

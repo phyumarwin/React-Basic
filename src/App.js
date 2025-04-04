@@ -11,16 +11,14 @@ function App() {
   const [blogs, setBlogs] = useState([
     {
       id : 1,
-      title : 'First Blog'
+      title : 'First Blog',
+      status : 'upcoming'
     },
     {
       id : 2,
-      title : 'Second Blog'
+      title : 'Second Blog',
+      status : 'dropped'
     },
-    {
-      id : 3,
-      title : 'Third Blog'
-    }
   ]);
   const addBlog = (blog) => {
     setBlogs((prevState => [...prevState, blog]))
