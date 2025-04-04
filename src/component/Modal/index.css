@@ -1,0 +1,18 @@
+.modal-component .modal-backdrop {
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.modal-component .modal {
+    background-color: goldenrod;
+    max-width: 480px;
+    margin: 200px auto;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+.modal-component .modal h1 {
+    margin: 20px;
+}

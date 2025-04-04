@@ -1,24 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Navbar from './component/nav/index';
+import BlogLists from './component/blogLists/index';
+import BlogForm from './component/BlogForm/index';
+import Modal from './component/Modal/index';
+
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+  const [blogs, setBlogs] = useState([
+    {
+      id : 1,
+      title : 'First Blog'
+    },
+    {
+      id : 2,
+      title : 'Second Blog'
+    },
+    {
+      id : 3,
+      title : 'Third Blog'
+    }
+  ]);
+  const addBlog = (blog) => {
+    setBlogs((prevState => [...prevState, blog]))
+    setShowModal(false)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar setShowModal = {setShowModal}/>
+      <BlogLists blogs = {blogs}/>
+      {showModal &&
+        <Modal setShowModal={setShowModal}>
+          <BlogForm addBlog={addBlog}/>
+        </Modal>
+      }
+    </>
   );
 }
 

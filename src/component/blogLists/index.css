@@ -1,5 +1,4 @@
-.blogLists {
-    background-color: rgb(13, 172, 119);
+.blogLists container {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -7,14 +6,14 @@
 }
 
 .blogLists .single_blog {
-    flex: 1;
-    background-color: rgb(107, 29, 181);
     margin: 20px;
-    width: 500px;
+    flex-basis: 350px;
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: aliceblue;
+    color: goldenrod;
     font-size: 30px;
+    border: 3px solid goldenrod;
+    border-radius: 30px;
 }
